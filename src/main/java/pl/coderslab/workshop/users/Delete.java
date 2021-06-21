@@ -21,6 +21,6 @@ public class Delete extends HttpServlet {
         UserDao userdao = new UserDao();
         userdao.delete(id);
         log.debug("User with ID: {} deleted",id);
-        resp.sendRedirect("/user/list");
+        resp.sendRedirect("/list");
     }
 }

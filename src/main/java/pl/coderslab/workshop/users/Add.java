@@ -31,6 +31,6 @@ public class Add extends HttpServlet {
         UserDao userdao = new UserDao();
         userdao.create(user);
         log.debug("User {} created",user);
-        resp.sendRedirect("/user/list");
+        resp.sendRedirect("/list");
     }
 }

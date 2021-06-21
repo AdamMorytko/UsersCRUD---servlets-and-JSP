@@ -25,11 +25,11 @@ public class MainPage implements Filter {
         HttpServletRequest httpReq = (HttpServletRequest) request;
         StringBuffer requestURL = httpReq.getRequestURL();
         String[] urls = {
-          "/add","/delete","/edit","/show","/list"
+          "/add","/delete","/edit","/show","/list","/theme/css/sb-admin-2.css"
         };
         log.debug(">>"+requestURL.toString()+"<<");
         if (StringUtils.indexOfAny(requestURL.toString(),urls)==-1){
-            ((HttpServletResponse) response).sendRedirect("/user/list");
+            ((HttpServletResponse) response).sendRedirect("/list");
         }else{
             chain.doFilter(request, response);
         }

@@ -52,6 +52,6 @@ public class Edit extends HttpServlet {
         userToUpdate.setEmail(email);
         userToUpdate.setPassword(password);
         userdao.update(userToUpdate);
-        resp.sendRedirect("/user/list");
+        resp.sendRedirect("/list");
     }
 }
